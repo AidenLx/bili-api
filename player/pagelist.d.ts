@@ -4,9 +4,9 @@ import { returnBody } from "./general";
 
 export const URL = "http://api.bilibili.com/x/player/pagelist";
 
-export type Params = PageListParams_A | PageListParams_B;
+export type Params = Params_avid | Params_bvid;
 
-export type Data = returnBody<pageInfo[]>
+export type Return = returnBody<pageInfo[]>
 
 interface pageInfo {
   /** 当前分P CID */
@@ -45,12 +45,12 @@ export const enum videoSource {
   qq = "qq",
 }
 
-interface PageListParams_A {
+interface Params_avid {
   /** 稿件avID，为av后的数字 eg. aid=13502509 */
   aid: number;
 }
 
-interface PageListParams_B {
+interface Params_bvid {
   /** 稿件bvID，为完整字符串(包括"bv") eg. bvid=BV1ex411J7GE */
   bvid: string;
 }

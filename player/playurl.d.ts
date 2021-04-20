@@ -6,11 +6,11 @@ export const URL = "http://api.bilibili.com/x/player/playurl";
 
 export type Params = PlayUrlParams_A | PlayUrlParams_B;
 
-export type Data = returnBody<PlayUrl>
+export type Return = returnBody<Data>
 
-export type PlayUrl = PlayUrl_Dash | PlayUrl_Trad;
+export type Data = DashData | TradData;
 
-export interface PlayUrl_Basic {
+export interface Data_Basic {
   /** 作用尚不明确 */
   from: "local";
   /** 作用尚不明确 */
@@ -37,7 +37,7 @@ export interface PlayUrl_Basic {
   seek_type: string;
 }
 
-export interface PlayUrl_Trad extends PlayUrl_Basic{
+export interface TradData extends Data_Basic{
   /** 视频分段 注：仅flv/mp4存在此项 仅flv方式具有分段(length>1) */
   durl: durlInfo[];
 }
@@ -59,7 +59,7 @@ export interface durlInfo {
   backup_url: string[];
 }
 
-export interface PlayUrl_Dash extends PlayUrl_Basic{
+export interface DashData extends Data_Basic{
   /** dash音视频流信息 注：仅dash存在此项 */
   dash: {
     /** 作用尚不明确 */
