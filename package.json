@@ -1,0 +1,12 @@
+{
+  "name": "bili-api",
+  "version": "0.1.0",
+  "description": "Type definitions for bilibili api",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/AidenLx/bili-api.git"
+  },
+  "license": "MIT",
+  "main": "",
+  "types": ""
+}
