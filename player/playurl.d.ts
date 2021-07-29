@@ -69,9 +69,9 @@ export interface DashData extends Data_Basic{
     /** 作用尚不明确 */
     min_buffer_time: number;
     /** 视频流信息 */
-    video: videoInfo[];
+    video: videoInfo[] | null;
     /** 音频流信息 */
-    audio: audioInfo[];
+    audio: audioInfo[] | null;
   }
 }
 
