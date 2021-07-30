@@ -138,9 +138,9 @@ export interface mediaInfo {
   /** 默认视频/音频流url 注：url内容存在转义符 有效时间为120min */
   base_url: string;
   /** 备用视频/音频流url 注：url内容存在转义符 有效时间为120min */
-  backupUrl: string[];
+  backupUrl: string[] | null;
   /** 备用视频/音频流url 注：url内容存在转义符 有效时间为120min */
-  backup_url: string[];
+  backup_url: string[] | null;
   /** 视频/音频所需最低带宽 */
   bandwidth: number;
   /** 视频/音频格式类型 */
