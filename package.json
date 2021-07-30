@@ -1,6 +1,6 @@
 {
   "name": "bili-api",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Type definitions for bilibili api",
   "repository": {
     "type": "git",
